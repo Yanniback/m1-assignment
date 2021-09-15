@@ -1,80 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <meta charset="utf-8">
+        <meta charset="utf-8">
         <title>California's Greatest Cliffs</title>
+        <link rel="stylesheet"  href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <body style="background-color:orange;"></body>
+<body id="contact">
     <!--Container to wrap everything-->
-     <div id="container">
-         <header>
-             <img src="images/contact-header.jpg" alt="contact-header" width="1000" height="325">
-        <div class="main-header"></div>
-        <div class="logo"></div>
+    <div id="container">
+ <header>
+    <div class="main-header">
         <!--Brand of Website-->
-        <img src="images/tarantula-logo.png" alt="tarantula-logo" width="150">
-       <main> <!--Main Navigation-->
-        <nav class="Main-Menu">
-            <ul>
-                <li><a href ="index.html">Home</a></li>
-                <li><a href ="terrestrial.html">Terrestrial</a></li>
-                <li><a href ="arboreal.html">Arboreal</a></li>
-                <li><a href ="contact.html">Contact</a></li>
+    <div class="logo">
+        <img src="images/tarantula-logo.png" alt="tarantula-logo" width="125">
+    </div>
+        <!--Main Navigation-->
+     <nav class="main-menu">
+         <ul>
+             <li class="active"><a href="index.html">Home</a></li>
+             <li><a href="arboreal.html">Arboreal</a></li>
+             <li><a href="terrestrial.html">Terrestrial</a></li>
+             <li><a href="contact.html">Contact</a></li>
             </ul>
-     </nav><!--End Main Navigation-->
-    </header> 
+        </nav><!--End Main Navigation-->
+    </div>
+ </header> 
      <!--Main Content-->
- <main>
-     <h1>Contacting Us</h1>
-     <p>If you are serious about inquiring one of our tarantulas please fill out this form below and once submitted, we will be in contact with you. If you need to contact us our phone and email are below:
-    </p>
-    <h2>Phone:</h2>
-    <p>1(800)SPIDERS</p>
+<main>
+        <h1>Contacting Us</h1>
+        <p>If you are serious about inquiring one of our tarantulas please fill out this form below and once submitted, we will be in contact with you. If you need to contact us our phone and email are below:
+        </p>
+        <h2>Phone:</h2>
+        <p>1(800)SPIDERS</p>
     
-    <h2>Email:</h2>
-    <p>info@tarantulaadoptioncenter.com</p>
-    <h2>Fill Out This Form:</h2>
-<form action="/contact" method="post">
-<fieldset>
-    <legend>Contact Form</legend>
-    <label>Enter your full name</label><br>
-    <input type="text" name="name"><br>
-    <label>Enter your email</label><br>
-    <input type="text" name="email"><br>
-    <label>Enter your phone</label><br>
-    <input type="text"name="phone"><br>
-    <br><label>How should we contact you?</label><br>
-    <input type="radio" name="contact" value="email"/>Email
-    <input type="radio" name="contact" value="phone"/>Phone<br/>  
-<br><label>Which spider would you like to inquire?</label><br>
-    <select>
-        <option>Aphonopelma Chalcodes</option>
-        <option>Avicularia Avicularia</option>
-        <option>Brachypelma Smithi</option>
-        <option>Caribena Versicolor</option>
-        <option>Grammostola Pulchra</option>
-        <option>Omothymus Violaceopes</option>
-        <option>Tapinauchenius Cupreus</option>
-        <option>Tliltocatl Albopilosus</option>
-        
-    </select><br>
-    <br>How did you hear about us:<br>
-    <textarea rows="5" cols="30"></textarea><br>
-       <input type="submit" value="Inquire"> 
-</fieldset>
+        <h2>Email:</h2>
+        <p>info@tarantulaadoptioncenter.com</p>
+        <h2>Fill Out This Form:</h2>
+    <form action="/contact" method="post">
+    <fieldset>
+        <legend>Contact Form</legend>
+        <div class="textbox">
+            <label>Enter your full name</label>
+            <input type="text" name="name">
+            <label>Enter your email</label>
+            <input type="text" name="email">
+            <label>Enter your phone</label>
+        </div>
+        <div class="radios">
+            <input type="text"name="phone">
+            <label>How should we contact you?</label>
+            <input type="radio" name="contact" value="email"/>Email
+            <input type="radio" name="contact" value="phone"/>Phone
+        </div>
+        <div class="selectmenu">    
+            <label>Which spider would you like to inquire?</label>
+            <select>
+                <option>Aphonopelma Chalcodes</option>
+                <option>Avicularia Avicularia</option>
+                <option>Brachypelma Smithi</option>
+                <option>Caribena Versicolor</option>
+                <option>Grammostola Pulchra</option>
+                <option>Omothymus Violaceopes</option>
+                <option>Tapinauchenius Cupreus</option>
+                <option>Tliltocatl Albopilosus</option>
+            </select>
+        </div>
+        <div class="commentbox">
+            <label>How did you hear about us:</label>
+            <textarea rows="5" cols="30"></textarea>
+        </div>
+        <div class="button">
+            <input type="submit" value="Inquire">
+        </div>
+    </fieldset>
     </form>
-
- </main> <!--End Main Content-->
+</main>
 <!--Footer Information-->
-   <footer>
-       <div id="nondisclaimer">
-          <div class="copy"> &copy; Copyright 2021 :: tarantulaadoptioncenter.com</div>
-
-            <p id="disclaimer"></p>
-                
+<footer>
+        <div id="nondisclaimer">
+       <div class="copy"> &copy; Copyright 2020 :: GreatCliffs.com</div>
+            <section>
+             <div class="social">
+                 <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-instagram"></a>
+                 <a href="#" class="fa fa-twitter"></a>
+             </div>
+            </section>
+         <div id="disclaimer">
+         <div><p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p></div> 
             <h3 class="social"></h3>
-   </footer>
-    </container><!--End of Container-->
+</footer>
+</div><!--End of Container-->
 </body>
 </html>

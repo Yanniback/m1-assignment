@@ -1,0 +1,90 @@
+header {
+  width: 100%;
+  min-height: 400px;
+  padding-top: 3em;
+}
+#home header {
+    background: no-repeat lightgrey url(images/tarantula-header.jpg);
+    background-size: 1500px;
+}
+#arboreal header {
+    background: no-repeat lightgrey url(images/arboreal-header.jpg);
+    background-size: 1500px;
+}
+#terresrrial header {
+    background: no-repeat lightgrey url(images/Tarantula-in-hide.jpg);
+    background-size: 1500px;
+}
+#contact header {
+    background: no-repeat lightgrey url(images/contact-header.jpg);
+    background-size: 1500px;
+}
+.main-header {
+    background-color:rgb(255, 255, 255, 0.8);
+    width: 700px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 100px;
+}
+/* coming-soon */
+section {
+    width: 100%;
+    background-color:#4288c3;
+}
+section #coming-soon {
+    width: 1200px;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+section #coming-soon .coming-soon {
+    display: inline-block;
+    margin: 0 0.75em;
+    padding: 1.3em 1.5em;
+    background-color:#fff;
+    border-radius: 50%;
+}
+section #coming-soon .coming-soon img {
+    width: 90px;
+    height: 90px;
+}
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
+li a {
+  text-decoration: none; /* Remove Underline */
+}
+li a:link {
+  color: rgb(241, 81, 7); /* Before Click */
+}
+li a:visited {
+  color: #03091b; /* After Click */
+}
+li a:hover {
+  color: #333; /* Mouse Over */
+}
+li a:active {
+  color: #f5a208; /* Mouse Down */
+}
+nav {
+  background-color: rgba(7, 0, 0, 0.411);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+main {
+  height: 400px;
+}
+main h1 {
+  color: rgb(0, 0, 0);
+  font-family: arial;
+}
+footer {
+  height: 40px;
+  background-color: rgb(129, 141, 179);
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(211, 218, 240);
+}
