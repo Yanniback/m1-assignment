@@ -327,7 +327,7 @@ main #album li {
     left: 140px;
     bottom: 50%;
     visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.438);
+    background-color: rgba(0, 0, 0, 0.603);
     color: #df5708
 }
 #photo:hover .info {
