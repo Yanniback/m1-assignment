@@ -22,6 +22,11 @@ header {
     background-size: 1375px;
 	background-position: center;
 }
+#gallery header {
+    background: no-repeat lightgrey url(images/gallery-header.jpg);
+    background-size: 1375px;
+	background-position: center; 
+}
 #contact header {
     background: no-repeat lightgrey url(images/contact-header.jpg);
     background-size: 1375px;
@@ -29,7 +34,7 @@ header {
 }
 .main-header {
     background-color:rgb(255, 255, 255, 0.8);
-    width: 590px;
+    width: 700px; /* size of nav bar */
     margin: 2em auto 0 auto;
     min-height: 100px;
     height: 100px;
@@ -308,3 +313,32 @@ legend {
 	  width: 100%;
 	  height: 500px;
   }
+  /* Gallery */
+ main #album #photo img {
+    width: 400px;
+    height: 200px;
+  }
+main #album li {
+    position: relative;
+    display: inline-block;
+  }
+.info {
+    position: absolute;
+    left: 175px;
+    bottom: 50%;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+#photo:hover .info {
+    visibility: visible;
+}
+#photo:hover {
+   cursor: pointer; 
+}
+.cap {
+    text-align: center;
+    font-weight: bold;
+    border: thick double #df5708;
+    margin-bottom: 10px;
+    margin-top: 0;
+}

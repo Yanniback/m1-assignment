@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>California's Greatest Cliffs</title>
+        <link rel="stylesheet"  href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="gallery">
+    	<!--Container to wrap everything-->
+     	<div id="container">
+	<header>
+   	 	<div class="main-header">     
+        <!--Brand of Website-->
+     	<div class="logo">
+			<img src="images/tarantula-logo.png" alt="tarantula-logo" width="125">
+    	</div>
+        <!--Main Navigation-->
+     	<nav class="main-menu">
+         	<ul>
+            	<li class="active"><a href="index.html">Home</a></li>
+             	<li><a href="arboreal.html">Arboreal</a></li>
+             	<li><a href="terrestrial.html">Terrestrial</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+             	<li><a href="contact.html">Contact</a></li>
+         	</ul>
+        </nav><!--End Main Navigation-->
+    	</div>
+	</header> 
+<!--Main Content-->
+<main>
+	<h1>Hello Fellow Tarantula Lovers!</h1> 
+    <p>Are you looking for a tarantula to adopt? Well you have come to the right place! As of right now we have new world of Terrestrial and Arboreal tarantulas. If your new to our website and totally new to the tarantula commmunity dont worry we will have the information about the two types of species and their habitat. If you go to the top of our page under our logo we have the two types of species plus our contact/adoption form. Clink these links to check out what we have. Thanks for Visiting!</p>
+	<ul id="album">
+      <!--<li id="photo"><img src="images/tarantula1.jpg"><li>
+         <li id="photo"><img src="images/tarantula2.jpg"><li>
+        <li id="photo"><img src="images/tarantula3.jpg"><li>
+        <li id="photo"><img src="images/tarantula4.jpg"><li>
+        <li id="photo"><img src="images/tarantula5.jpg"><li>
+        <li id="photo"><img src="images/tarantula6.jpg"><li>
+        <li id="photo"><img src="images/tarantula7.jpg"><li>
+        <li id="photo"><img src="images/tarantula8.jpg"><li>
+        <li id="photo"><img src="images/tarantula9.jpg"><li>
+        <li id="photo"><img src="images/tarantula10.jpg"><li>-->      
+    </ul>
+<!--End of main content-->
+</main>
+<!--Footer Information-->
+<footer>
+	<div id="nondisclaimer">
+	   <div class="copy"> &copy; Copyright 2020 :: GreatCliffs.com</div>
+ <section>
+			 <div class="social">
+				 <a href="#" class="fa fa-facebook"></a>
+				 <a href="#" class="fa fa-instagram"></a>
+				 <a href="#" class="fa fa-twitter"></a>
+			 </div>
+ </section>
+		 <div id="disclaimer">
+		 <div><p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p></div> 
+		 <h3 class="social"></h3>
+</footer>
+</div><!--End of Container-->
+<script>
+    var numOfPhotos = 10;
+    var photos = []; //Declare an empty array to store image file names
+    var fileNames = []; // Declare an empty array to store image file names
+    var imageList = []; // Declare an empty array to store html list that contains an image
+    var image; // Declare an empty variable to store assembled empty list codes
+    var openList = "<li id='photo'>"; // Declare a variable to contain open list tag
+    var closeList = "</li>"; // Declare a variable to contain close list tag
+    var captionList = ["Avicularia Avicularia","Tapinauchenius Cupreus","Omothymus Violaceopes","Caribena Versicolor","Aphonopelma Chalcodes","Brachypelma Smithi","Grammostola Pulchra","Tliltocatl Albopilosus","Costa Rican Tiger Rump","Ceratogyrus Darlingi"];
+    var opencaptionTag = "<figcaption class='cap'>"; 
+    var closedcaptionTag = "</figcaption>";
+    var DescText = ["text1","tarantula2","tarantula3","tarantula4","tarantula5","tarantula6","tarantula7","tarantula8","tarantula9","tarantula10"];
+    var openDescTag = "<div class= 'info'>";
+    var closedDescTag = "</div>";
+    // Create a loop to create 10 images starting with index of 0
+    for (var i = 0; i < 10; i++) {
+      fileNames.push("tarantula" + (i + 1)); //create image file name & store in array
+      photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); // Assemble file name into an image element & store in array
+      image = openList + photos[i] + openDescTag + DescText[i] + closedDescTag + opencaptionTag + captionList[i] + closedcaptionTag + closeList; // Assembly everything so it's a full code
+      imageList.push(image); // Store the fully assemble code of each image list
+    }
+    // Display all six image codes store in the array
+    document.getElementById("album").innerHTML = imageList.join("");
+  </script>
+</body>
+</html>
