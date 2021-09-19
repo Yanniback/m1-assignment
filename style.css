@@ -324,10 +324,11 @@ main #album li {
   }
 .info {
     position: absolute;
-    left: 175px;
+    left: 140px;
     bottom: 50%;
     visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.233);
+    background-color: rgba(0, 0, 0, 0.438);
+    color: #df5708
 }
 #photo:hover .info {
     visibility: visible;
@@ -341,4 +342,5 @@ main #album li {
     border: thick double #df5708;
     margin-bottom: 10px;
     margin-top: 0;
+    background-color: #0000003a;
 }
