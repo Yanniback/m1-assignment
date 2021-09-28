@@ -45,7 +45,7 @@
     <div id="infobox"> 
       <div id="infoTitle"></div>
       <div id="info"></div>
-      <p id="infoCloseText"></p>
+      <p id="infoClose"></p>
     </div>
 <!--End of main content-->
 </main>
@@ -110,10 +110,10 @@
       document.getElementById("infobox").style.visibility="visible";
       document.getElementById("infoTitle").innerHTML = captionTag[which];
       documnet.getElementById("info").innerHTML = infoText[which];
-      document.getElementById("infoCloseText").innerHTML = infoCloseText;
+      document.getElementById("infoClose").innerHTML = infoCloseText;
     }
-     var closeInfo = document.getElementById("infoCloseText");
-    closeInfo.addEventListener("click", hideInfo);
+     var infoClose = document.getElementById("infoClose");
+    infoClose.addEventListener("click", hideInfo);
     
     function hideInfo() {
       document.getElementById("infobox").style.visibility="hidden";
