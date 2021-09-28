@@ -66,23 +66,49 @@
     var fileNames = []; // Declare an empty array to store image file names
     var imageList = []; // Declare an empty array to store html list that contains an image
     var image; // Declare an empty variable to store assembled empty list codes
-    var openList = "<li id='photo'>"; // Declare a variable to contain open list tag
+    var openList1 = "<li id='photo'>"; // Declare a variable to contain open list tag #1
+    var openList2 = "'>"; // Declare a variable to contain open list tag #2
     var closeList = "</li>"; // Declare a variable to contain close list tag
     var captionList = ["Avicularia Avicularia","Tapinauchenius Cupreus","Omothymus Violaceopes","Caribena Versicolor","Aphonopelma Chalcodes","Brachypelma Smithi","Grammostola Pulchra","Tliltocatl Albopilosus","Costa Rican Tiger Rump","Ceratogyrus Darlingi"];
     var opencaptionTag = "<figcaption class='cap'>"; 
     var closedcaptionTag = "</figcaption>";
-    var DescText = ["Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","New World Tarantula","New World Tarantula"];
     var openDescTag = "<div class= 'info'>";
     var closedDescTag = "</div>";
+    
+    //Lab assign. 9/25/21
+    var openPad = "<div id= 'desc' class='description' onClick='displayInfo(";
+    var openPadClose = ")'>";
+    var closePad = "</div>";
+    var DescText = ["Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","New World Tarantula","New World Tarantula"]; 
+    //Lab assign. 9/25/21
+    var openLink = "<a href='#";
+    var openLinkClose = "'>";
+    var closelink = "<a/>";
+    var infoText = [
+      "Avicularia avicularia, sometimes called the pinktoe tarantula, is a species of tarantula native from Costa Rica to Brazil and the southern Caribbean. This species is sometimes called the Guyana pinktoe, common pinktoe, or South American pinktoe. A full grown pinktoe tarantula can grow up to six inches in length.","They have true iridescent colors that change based on the amount of light and viewing angle. They are relatively small compared to sister genus Psalmopoeus, averaging about 4 to 4.5 inches long. This genus is well known by hobbyists for their incredible speed and striking coloration, but is not recommended for inexperienced owners. They are extremely skittish and defensive, and combined with their speed, handling them is not recommended.","Hello3","Hello4","Hello5","Hello6","Hello7","Hello8","Hello9","Hello10"
+    ]
+    var infoCloseText = "Click this to close";
+
     // Create a loop to create 10 images starting with index of 0
     for (var i = 0; i < 10; i++) {
       fileNames.push("tarantula" + (i + 1)); //create image file name & store in array
       photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); // Assemble file name into an image element & store in array
-      image = openList + photos[i] + openDescTag + DescText[i] + closedDescTag + opencaptionTag + captionList[i] + closedcaptionTag + closeList; // Assembly everything so it's a full code
+      image = openList1 + (i + 1) + openList2 + photos[i] + openPad + i + openPadClose + closePad + openDescTag + DescText[i] + closedDescTag + opencaptionTag + captionList[i] + closedcaptionTag + closeList; // Assembly everything so it's a full code
       imageList.push(image); // Store the fully assemble code of each image list
     }
     // Display all six image codes store in the array
     document.getElementById("album").innerHTML = imageList.join("");
+
+    //Lab assign. 9/25/21
+    function displayInfo(which) {
+      document.getElementById("desc").style.visibility="visible";
+      document.getElementById("desc").innerHTML = captionTag[which] + "<p>" + infoText[which] + "</p>" + "<p id='closeInfo'>" + infoCloseText + "</p>";
+    }
+     var closeInfo = document.getElementById("closeInfo");
+    closeInfo.addEventListener("click", hideInfo);
+    function hideInfo() {
+      document.getElementById("desc").style.visibility="hidden";
+    }
   </script>
 </body>
 </html>
