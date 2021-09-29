@@ -330,11 +330,29 @@ main #album li {
     background-color: rgba(0, 0, 0, 0.603);
     color: #df5708
 }
+#infobox {
+background-color: #000;
+position: absolute;
+top: 650px;
+left: 17%;
+color: #fff;
+visibility: hidden;
+width: 30%;
+padding: 35px;
+}
+#infoTitle{
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
 #photo:hover .info {
     visibility: visible;
 }
 #photo:hover {
    cursor: pointer; 
+}
+#infoClose:hover {
+    cursor: pointer;
 }
 .cap {
     text-align: center;

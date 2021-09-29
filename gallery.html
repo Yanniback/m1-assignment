@@ -44,7 +44,7 @@
     </ul>
     <div id="infobox"> 
       <div id="infoTitle"></div>
-      <div id="info"></div>
+      <div id="infoDesc"></div>
       <p id="infoClose"></p>
     </div>
 <!--End of main content-->
@@ -72,25 +72,23 @@
     var imageList = []; // Declare an empty array to store html list that contains an image
     var image; // Declare an empty variable to store assembled empty list codes
     var openList1 = "<li id='photo'"; // Declare a variable to contain open list tag #1
-    var openList2 = "'>"; // Declare a variable to contain open list tag #2
+    var openList2 = ">"; // Declare a variable to contain open list tag #2
     var closeList = "</li>"; // Declare a variable to contain close list tag
-    var captionList = ["Avicularia Avicularia","Tapinauchenius Cupreus","Omothymus Violaceopes","Caribena Versicolor","Aphonopelma Chalcodes","Brachypelma Smithi","Grammostola Pulchra","Tliltocatl Albopilosus","Costa Rican Tiger Rump","Ceratogyrus Darlingi"];
+    var captionTitle = ["Avicularia Avicularia","Tapinauchenius Cupreus","Omothymus Violaceopes","Caribena Versicolor","Aphonopelma Chalcodes","Brachypelma Smithi","Grammostola Pulchra","Tliltocatl Albopilosus","Davus fasciatus","Ceratogyrus Darlingi"];
     var opencaptionTag = "<figcaption class='cap'>"; 
     var closedcaptionTag = "</figcaption>";
-    var openDescTag = "<div class= 'info'>";
-    var closedDescTag = "</div>";
     
     //Lab assign. 9/25/21
-    var openPad = "<div id= 'desc' class='description' onClick='displayInfo(";
+    var openPad = "<div id= 'desc' class='info' onClick='displayInfo(";
     var openPadClose = ")'>";
     var closePad = "</div>";
-    var DescText = ["Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","New World Tarantula","New World Tarantula"]; 
+    var DescText = ["Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Arboreal Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Terrestrial Tarantula","Old World Tarantula","Old World Tarantula"]; 
     //Lab assign. 9/25/21
     var openLink = "<a href='#";
     var openLinkClose = "'>";
-    var closelink = "<a/>";
+    var closelink = "</a>";
     var infoText = [
-      "Avicularia avicularia, sometimes called the pinktoe tarantula, is a species of tarantula native from Costa Rica to Brazil and the southern Caribbean. This species is sometimes called the Guyana pinktoe, common pinktoe, or South American pinktoe. A full grown pinktoe tarantula can grow up to six inches in length.","They have true iridescent colors that change based on the amount of light and viewing angle. They are relatively small compared to sister genus Psalmopoeus, averaging about 4 to 4.5 inches long. This genus is well known by hobbyists for their incredible speed and striking coloration, but is not recommended for inexperienced owners. They are extremely skittish and defensive, and combined with their speed, handling them is not recommended.","Hello3","Hello4","Hello5","Hello6","Hello7","Hello8","Hello9","Hello10"
+      "Avicularia avicularia, sometimes called the pinktoe tarantula, is a species of tarantula native from Costa Rica to Brazil and the southern Caribbean. This species is sometimes called the Guyana pinktoe, common pinktoe, or South American pinktoe. A full grown pinktoe tarantula can grow up to six inches in length.","They have true iridescent colors that change based on the amount of light and viewing angle. They are relatively small compared to sister genus Psalmopoeus, averaging about 4 to 4.5 inches long. This genus is well known by hobbyists for their incredible speed and striking coloration, but is not recommended for inexperienced owners. They are extremely skittish and defensive, and combined with their speed, handling them is not recommended.","The Singapore blue (Omothymus violaceopes) is a large, arboreal species of tarantula from Malaysia and Singapore. These spiders have been known to grow in excess of 9 inches (23 cm) across. The legs are an intense blue with a brown or gold carapace. The male is usually not as vibrant, the species exhibiting sexual dimorphism. The generic placement of the species has been questioned, and specimens identified as males of this species may actually be from a different species.","The Antilles pinktoe tarantula (Caribena versicolor), also known as the Martinique red tree spider or the Martinique pinktoe is popular as a spider pet because of its docile character and unique coloration. Antilles pinktoe tarantulas are arboreal (tree-dwelling). They spin elaborate funnel webs in which they spend most of their time. Males usually are slightly more brightly colored than females. As in most tarantula species, males do not grow as large as females, and their abdomens are smaller than those of females, even in proportion to their size.","Aphonopelma chalcodes, commonly known as the western desert tarantula, Arizona blond tarantula or Mexican blond tarantula is a species of spider belonging to the family Theraphosidae. The common name Blonde Tarantula refers to the carapace, which is densely covered in pale hairs, and contrasts strongly with the all-dark legs and abdomen. Additionally, these spiders have low toxicity, a long life expectancy, and several offspring.","Brachypelma smithi is a species of spider in the family Theraphosidae (tarantulas) native to Mexico. Brachypelma smithi is a large spider. A sample of seven females had a total body length (excluding chelicerae and spinnerets) in the range 52–59 mm (2.0–2.3 in).","Commonly known as the Brazilian black, mature specimens are almost entirely black. Although like most new world tarantulas it possesses urticating hairs, if provoked, they would much rather flee than attack. Their venom is not as irritating as many other species of tarantulas. The Brazilian black is a slow grower, taking up to eight years to reach maturity, reaching up to 18 cm (7 in). As with all tarantulas, females of this species will almost always outlive males by many years. As a juvenile in captivity, this species tends to burrow when given the opportunity. They thrive on mealworms, crickets, roaches, and other small insects.","Tliltocatl albopilosus (previously Brachypelma albopilosum) is a species of tarantula, also known as the curlyhair tarantula. The curlyhair tarantula is a plump-bodied spider, covered with dark brown to black bristles that start light in coloration as a juvenile and darken as the tarantula ages. It has a golden-bronze sheen due to longer gold bristles that cover the whole body, which are particularly dense on the hind legs. In captivity both male and female specimens have grown to have a leg span of just over 6 inches, however, males live a shorter life at only 5 years in captivity opposed to females reportedly living up to 20 years.","Davus fasciatus, commonly known as the Costa Rican tiger rump, is a species of a new-world tarantula native to Costa Rica. This is a terrestrial species with a maximum legspan of 12 centimetres or 4.7 in, which makes it a rather small tarantula species, yet it is one of the largest of its genus.","Ceratogyrus darlingi (commonly called burst horned baboon tarantula or African rear-horned baboon tarantula, synonym Ceratogyrus bechuanicus) is a theraphosid spider from southern Africa, mainly Botswana and Lesotho. They reach a body length of about 5 inches (130 mm) and are ash-gray, mud-brown to black. The peltidium features a black foveal horn.They will readily take crickets, roaches, and superworms but tend to shy away from large prey items. Food is usually pulled in and eaten inside the burrow. Molting also occurs inside the burrow."
     ]
     var infoCloseText = "Click this to close";
 
@@ -99,17 +97,28 @@
       fileNames.push("tarantula" + (i + 1)); //create image file name & store in array
       photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); // Assemble file name into an image element & store in array
       image = openList1 + 
-      (i + 1) + openList2 + photos[i] + openPad + i + openPadClose + closePad + openDescTag + DescText[i] + closedDescTag + opencaptionTag + captionList[i] + closedcaptionTag + closeList; // Assembly everything so it's a full code
+      (i + 1) + 
+      openList2 + 
+      photos[i] + 
+      opencaptionTag +
+      captionTitle[i] + 
+      closedcaptionTag +
+      openPad + 
+      i + 
+      openPadClose + 
+      DescText[i] + 
+      closePad + 
+      closeList; // Assembly everything so it's a full code
       imageList.push(image); // Store the fully assemble code of each image list
     }
     // Display all six image codes store in the array
-    document.getElementById("album").innerHTML = imageList.join("");
+      document.getElementById("album").innerHTML = imageList.join("");
 
     //Lab assign. 9/25/21
     function displayInfo(which) {
       document.getElementById("infobox").style.visibility="visible";
-      document.getElementById("infoTitle").innerHTML = captionTag[which];
-      documnet.getElementById("info").innerHTML = infoText[which];
+      document.getElementById("infoTitle").innerHTML = captionTitle[which];
+      document.getElementById("infoDesc").innerHTML = infoText[which];
       document.getElementById("infoClose").innerHTML = infoCloseText;
     }
      var infoClose = document.getElementById("infoClose");
