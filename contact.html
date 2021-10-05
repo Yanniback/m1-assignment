@@ -49,14 +49,27 @@
             <label>Enter your phone</label>
         </div>
         <div class="radios">
-            <input type="text"name="phone">
             <label>How should we contact you?</label>
-            <input type="radio" name="contact" value="email"/>Email
-            <input type="radio" name="contact" value="phone"/>Phone
+            <select id = "selectContact" onchange="drop()">
+                <option>Select One</option>
+                <option id = "optionEmail">Email</option>
+                <option id = "optionPhone">Phone</option>
+            </select>
+
+            <div id = "email" style = "display: none;">
+                <label>Enter your email</label>
+                <input type = "email" name = "email"> 
+            </div>
+            <div id = "phone" style = "display: none;">
+                <label>Enter your phone</label>
+                <input type = "phone" name = "phone">
+            </div>
+            
+         
         </div>
         <div class="selectmenu">    
             <label>Which spider would you like to inquire?</label>
-            <select id="myList" onchange="drop()">
+            <select id="myList">
                 <option id = "option1" >Aphonopelma Chalcodes</option>
                 <option id = "option2" >Avicularia Avicularia</option>
                 <option id = "option3" >Brachypelma Smithi</option>
@@ -66,7 +79,7 @@
                 <option id = "option7" >Tapinauchenius Cupreus</option>
                 <option id = "option8" >Tliltocatl Albopilosus</option>
             </select>
-            <p>Your selected Spider is: <input type="text" id = "menu" size = "20"></p>
+            
         </div>
         <div class="commentbox">
             <label>How did you hear about us:</label>
@@ -99,44 +112,22 @@
     whichoption.addEventListener("change", drop);
     
     function drop() {
-        var option1 = document.getElementById("option1").selected;
-            if (option1 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option1").style.display = "none";}
+        var optionEmail = document.getElementById("optionEmail")
+        var optionPhone = document.getElementById("optionPhone")
+        var email = document.getElementById("email")
+        var phone = document.getElementById("phone")
+
+            if(optionEmail.selected){
+                email.style.display = "block";
+                phone.style.display = "none";
+            } else if(optionPhone.selected){
+                email.style.display = "none";
+                phone.style.display = "block";
+            } else {
+                email.style.display = "none";
+                phone.style.display = "none";
             }
-
-        var option2 = document.getElementById("option2").selected;
-            if (option2 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option2").style.display = "none";}
-            
-        var option3 = document.getElementById("option3").selected;
-            if (option3 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option3").style.display = "none";}
-            
-        var option4 = document.getElementById("option4").selected;
-            if (option4 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option4").style.display = "none";}
-            
-        
-            var option5 = document.getElementById("option5").selected;
-            if (option5 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option5").style.display = "none";}
-            
-        
-            var option6 = document.getElementById("option6").selected;
-            if (option6 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option6").style.display = "none";}
-            
-
-        var option7 = document.getElementById("option7").selected;
-            if (option7 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option7").style.display = "none";}
-            
-
-            var option8 = document.getElementById("option8").selected;
-            if (option8 == true) { document.getElementById("myList"); }
-                else{document.getElementById("option8").style.display ="none"; 
-            
-            }
+    }
             
     
 
