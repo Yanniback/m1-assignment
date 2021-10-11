@@ -5,6 +5,8 @@
         <title>California's Greatest Cliffs</title>
         <link rel="stylesheet"  href="style.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body id="gallery">
     	<!--Container to wrap everything-->
@@ -46,6 +48,10 @@
       <div id="infoTitle"></div>
       <div id="infoDesc"></div>
       <p id="infoClose"></p>
+    </div>
+    <div class = "backDrop"></div>
+    <div class = "imageBox">
+      <div class = "close">X</div>
     </div>
 <!--End of main content-->
 </main>
@@ -127,6 +133,34 @@
     function hideInfo() {
       document.getElementById("infobox").style.visibility="hidden";
     }
+    /* light box */
+    $(document).ready(function() {
+        $( "#photo img" ).click(function() {
+        $(".backDrop").animate( {
+        "opacity": "0.5"
+        },3000).css('display', 'block');
+        $(".imageBox").fadeIn();
+
+        if($(".imageBox").contents("img")) {
+          $(".imageBox").contents().remove("img")
+        }
+
+        var img = $(this).clone();
+        $(".imageBox").append(img);
+      });
+      
+      $(".close").click(function() {
+        $(".imageBox").fadeOut();
+        $(".backDrop").animate( {
+        "opacity": "0"
+        },3000).css('display', 'none');
+      })
+    })
+
+    
+     
+    
+
   </script>
 </body>
 </html>
